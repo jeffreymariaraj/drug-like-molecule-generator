@@ -92,18 +92,6 @@ pillow==10.0.1
 - **Unsaturated**: Alkenes, Alkynes
 - **Cyclic**: Oxirane
 
-## 🌐 Deployment
-
-### Streamlit Cloud (Recommended)
-1. Push your code to GitHub
-2. Visit [share.streamlit.io](https://share.streamlit.io)
-3. Connect your GitHub repository
-4. Deploy automatically!
-
-### Other Platforms
-- **Heroku**: Add a `Procfile` and deploy
-- **Railway**: Connect GitHub repo for automatic deployment
-- **AWS/Azure/GCP**: Use containerized deployment
 
 ## 📊 Example Output
 
