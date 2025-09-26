@@ -1,28 +1,10 @@
 import streamlit as st
 import pandas as pd
+from rdkit import Chem
+from rdkit.Chem import Draw, Descriptors, Crippen, rdMolDescriptors
 import random
 import io
 from PIL import Image
-
-# Try to import RDKit with error handling
-try:
-    from rdkit import Chem
-    from rdkit.Chem import Draw, Descriptors, Crippen, rdMolDescriptors
-    RDKIT_AVAILABLE = True
-except ImportError as e:
-    st.error(f"RDKit not available: {e}")
-    st.error("This app requires RDKit for molecule generation. Please check the deployment configuration.")
-    st.info("💡 **Troubleshooting tips:**")
-    st.info("1. Try using Streamlit Cloud instead of Community Cloud")
-    st.info("2. Consider Railway.app or Render.com for deployment")
-    st.info("3. Check if your Python version is compatible (3.8+)")
-    RDKIT_AVAILABLE = False
-    # Create dummy functions for when RDKit is not available
-    Chem = None
-    Draw = None
-    Descriptors = None
-    Crippen = None
-    rdMolDescriptors = None
 
 # Set page configuration
 st.set_page_config(
